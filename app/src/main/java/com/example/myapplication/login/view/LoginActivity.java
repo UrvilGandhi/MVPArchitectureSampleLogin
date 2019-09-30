@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView, View
 
         //init
         loginPresenter = new LoginPresenterCompl(LoginActivity.this);
-        loginPresenter.setProgressBarVisiblity(View.INVISIBLE);
+        loginPresenter.setProgressBarVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView, View
                 loginPresenter.clear();
                 break;
             case R.id.btn_login_login:
-                loginPresenter.setProgressBarVisiblity(View.VISIBLE);
+                loginPresenter.setProgressBarVisibility(View.VISIBLE);
                 btnLogin.setEnabled(false);
                 btnClear.setEnabled(false);
                 loginPresenter.doLogin(editUser.getText().toString(), editPass.getText().toString());
@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView, View
 
     @Override
     public void onLoginResult(Boolean result, int code) {
-        loginPresenter.setProgressBarVisiblity(View.INVISIBLE);
+        loginPresenter.setProgressBarVisibility(View.INVISIBLE);
         btnLogin.setEnabled(true);
         btnClear.setEnabled(true);
         if (result){

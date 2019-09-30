@@ -24,9 +24,9 @@ public class LoginPresenterCompl implements ILoginPresenter {
     }
 
     @Override
-    public void doLogin(String name, String passwd) {
+    public void doLogin(String name, String password) {
         boolean isLoginSuccess = true;
-        final int code = user.checkUserValidity(name,passwd);
+        final int code = user.checkUserValidity(name,password);
         if (code!=0) isLoginSuccess = false;
         final boolean result = isLoginSuccess;
         handler.postDelayed(new Runnable() {
@@ -38,8 +38,8 @@ public class LoginPresenterCompl implements ILoginPresenter {
     }
 
     @Override
-    public void setProgressBarVisiblity(int visiblity){
-        iLoginView.onSetProgressBarVisibility(visiblity);
+    public void setProgressBarVisibility(int visibility){
+        iLoginView.onSetProgressBarVisibility(visibility);
     }
 
     private void initUser(){

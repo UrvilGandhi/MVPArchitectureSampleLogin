@@ -3,7 +3,7 @@ package com.example.myapplication.login.model;
 public interface IUser {
     String getName();
 
-    String getPasswd();
+    String getPassword();
 
-    int checkUserValidity(String name, String passwd);
+    int checkUserValidity(String name, String password);
 }
